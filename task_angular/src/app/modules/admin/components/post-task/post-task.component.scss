@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/dashboard_bg.jpg') center/cover no-repeat;
+
+    //background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light blue gradient background */
+}
+
+mat-card {
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* light transparent background */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* soft shadow */
+
+    @media screen and (max-width: 500px) {
+        max-width: 90%;
+    }
+}
+
+mat-card-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    color: #000 !important; /* Ensure typed text color is black */
+}
+
+mat-form-field .mat-input-element {
+    color: #000 !important; /* Force black text color in the input field */
+}
+
+textarea.mat-mdc-input-element {
+  color: #000 !important;
+  opacity: 1 !important; /* ensure text is fully visible */
+}
+::ng-deep .mat-mdc-select-value-text,
+::ng-deep .mat-mdc-select-min-line {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
+
+button {
+    width: 100%;
+    background-color: #6200ea; /* Bluish button */
+    color: #333 !important;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: #565dff;
+    }
+    &:not(:disabled) {
+        background-color:rgb(105, 221, 234);  /* Black background */
+        color: #fff;  /* White text */
+    }
+    
+    &:disabled {
+        background-color: #e0e0e0; /* Disabled state background */
+        color: #9e9e9e; /* Disabled text color */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    mat-card-title {
+        font-size: 22px;
+    }
+
+    mat-form-field {
+        margin-bottom: 15px;
+        border: 1px solid #999;
+        border-radius: 5px;
+    }
+}
+
+.error-snackbar {
+    background-color: #f44336 !important;
+}
+
+

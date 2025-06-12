@@ -1,0 +1,100 @@
+.dashboard-container {
+  
+  background-image: url('/assets/dashboard_bg.jpg');  // put your image path here
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 92vh;  // full viewport height
+}
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //background: linear-gradient(to right, #e3f2fd, #bbdefb); // Lighter, calmer blue gradient
+  min-height: 37vh;
+  padding: 20px;
+
+  .task-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Slightly stronger shadow for better depth
+    background-color: #ffffff; // White background for modern look
+    transition: transform 0.3s ease; // Smooth scaling effect on hover
+
+    &:hover {
+      transform: translateY(-5px); // Lift the card slightly on hover for a modern effect
+    }
+
+    .task-details {
+      padding: 20px;
+      background-color: #f5f5f5; // Subtle background for content area
+
+      .task-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1976d2; // Strong, modern blue for task name
+        margin-bottom: 10px;
+      }
+
+      .task-description {
+        font-size: 14px;
+        color: #757575; // Light gray color for description
+        margin-bottom: 10px;
+      }
+
+      .task-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        .info-row {
+          flex: 0 0 50%;
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+
+          .info-label {
+            font-weight: 500;
+            margin-right: 5px;
+            color: #607d8b; // Subtle grayish blue for labels
+          }
+
+          .info-value {
+            font-weight: bold;
+            color: #333; // Dark text for better readability
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        .view-button {
+        color: #212121; // Dark gray, almost black
+        margin-right: 10px;
+        }
+
+        .update-button {
+          margin-right: 10px;
+          color: #0288d1; // Modern blue for the update button
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .task-card {
+      flex: 1 1 calc(50% - 20px); // 2 per row
+    }
+  }
+
+  @media (max-width: 600px) {
+    .task-card {
+      flex: 1 1 100%; // 1 per row
+    }
+  }
+}

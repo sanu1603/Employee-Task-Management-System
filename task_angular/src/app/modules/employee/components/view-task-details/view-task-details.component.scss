@@ -1,0 +1,170 @@
+.card-container {
+  background-image: url('/assets/dashboard_bg.jpg'); // Replace with your actual path
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; // ensures background covers entire view height
+  padding: 40px 0;   // spacing above and below content
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  //background-color: #f8f8f8;
+  min-height: 50vh;
+  padding: 20px;
+  align-items: center; // center content horizontally
+  gap: 20px;
+
+  .task-card {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(75, 183, 225, 0.3);
+    background-color: #ecbeea;
+    padding: 20px;
+
+    .task-details {
+      .task-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #108ee9;
+        margin-bottom: 15px;
+      }
+
+      .task-description {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #555;
+      }
+
+      .task-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        gap: 15px;
+
+        .info-row {
+          flex: 0 0 45%;
+          display: flex;
+          align-items: center;
+
+          .info-label {
+            font-weight: 600;
+            margin-right: 8px;
+            color: #607d8b;
+            font-size: 14px;
+          }
+
+          .info-value {
+            font-weight: 700;
+            color: #333;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .comment-card {
+    width: 70%;
+    background-color: #f3baf0;      // light soft blue-gray background
+    box-shadow: 0 4px 12px rgba(70, 100, 140, 0.12);  // subtle bluish shadow
+    border-radius: 10px;
+    padding: 22px;
+    color: #34495e;                 // dark slate blue for text
+
+    mat-form-field {
+      width: 100%;
+
+
+      .mat-form-field-label {
+        color: #9dc3e9;             // muted blue-gray label
+      }
+
+     textarea.mat-input-element {
+      color: #f9f4f4;             // white text inside textarea
+      background-color: black;  // black background
+      border-radius: 6px;
+      padding: 10px;
+      border: 1px solid #d1dbe6; // subtle border
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: #1976d2;   // blue border on focus
+        outline: none;
+      }
+    }
+  }
+
+    button {
+      margin-top: 12px;
+      float: right;
+      background-color: #1976d2;    // strong blue button
+      color: #ffffff;               // white text
+      font-weight: 600;
+      box-shadow: 0 3px 8px rgba(25, 118, 210, 0.4);
+      transition: background-color 0.3s ease;
+
+      &:hover:not(:disabled) {
+        background-color: #145a9c;  // darker blue on hover
+        box-shadow: 0 4px 12px rgba(20, 90, 156, 0.6);
+      }
+
+      &[disabled] {
+        background-color: #cbd6e2 !important; // soft disabled blue-gray
+        color: #7a8a9d !important;            // muted gray text
+        cursor: not-allowed;
+        opacity: 1 !important;                 // keep text fully visible
+      }
+    }
+  }
+
+  // Container for all comments
+  .comments-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    mat-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+      mat-card-header {
+        background-color: #eda4ef;
+        border-radius: 8px 8px 0 0;
+
+        mat-card-title {
+          font-weight: 600;
+          color: #1976d2;
+        }
+
+        mat-card-subtitle {
+          font-size: 12px;
+          color: #141313;
+        }
+      }
+
+      mat-card-content {
+        font-size: 14px;
+        color: #1b0b6d;
+        padding: 15px 20px;
+         background-color: #9dd9eb;
+         font-weight: bold;
+      }
+    }
+  }
+}
+
+// Image styling for avatar - keeps perfect fit and circular shape
+.example-header-image {
+  width: 40px;                // fixed size - adjust as needed
+  height: 40px;               // fixed size - adjust as needed
+  border-radius: 50%;         // circle shape
+  //background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('https://avatars.githubusercontent.com/u/9919?v=4');
+  background-size: cover;     // cover so no stretching
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

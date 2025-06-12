@@ -1,0 +1,67 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('/assets/dashboard_bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 40px 20px; // optional for spacing
+  box-sizing: border-box;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #cacee8;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.95); // white form for readability
+        display: flex;
+        flex-direction: column;
+         padding: 20px;
+        border-radius: 8px;
+        mat-form-field {
+             width: 100%;
+            margin-top: 20px;
+        }
+
+        input {
+    color: #000 !important; /* Ensure typed text color is black */
+}
+
+mat-form-field .mat-input-element {
+    color: #000 !important; /* Force black text color in the input field */
+}
+
+textarea.mat-mdc-input-element {
+  color: #000 !important;
+  opacity: 1 !important; /* ensure text is fully visible */
+}
+::ng-deep .mat-mdc-select-value-text,
+::ng-deep .mat-mdc-select-min-line {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
+        button {
+            align-self: center;
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+
+        form {
+            mat-form-field {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
