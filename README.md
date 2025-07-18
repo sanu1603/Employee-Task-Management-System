@@ -40,8 +40,6 @@ This is the **frontend module** of the Employee Task Management System built usi
 
 ---
 
-## 📁 Project Structure
-
 ## Backend API Section
 
 
